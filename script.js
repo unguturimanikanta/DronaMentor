@@ -1046,3 +1046,281 @@
         openModal(`
 
           <h2>🛣️ ${escapeHTML(
+/* ===================================================
+   ROMING AI MENTOR — LIVE BACKEND CONNECTION
+=================================================== */
+
+const MENTOR_API =
+  "https://dronamentor-ai.onrender.com/api/mentor";
+
+const mentorChat = $("mentorChat");
+const mentorInput = $("mentorInput");
+const mentorSend = $("mentorSend");
+
+function addMentorMessage(text, type) {
+
+  if (!mentorChat) return;
+
+  const message =
+    document.createElement("div");
+
+  message.className =
+    "mentorMessage " +
+    (type === "user" ? "user" : "bot");
+
+  message.innerHTML =
+    escapeHTML(text)
+      .replace(/\n/g, "<br>");
+
+  mentorChat.appendChild(message);
+
+  mentorChat.scrollTop =
+    mentorChat.scrollHeight;
+
+}
+
+function setMentorLoading(loading) {
+
+  if (!mentorSend) return;
+
+  mentorSend.disabled = loading;
+
+  mentorSend.textContent =
+    loading ? "…" : "➤";
+}
+
+async function askROMINGMentor(message) {
+
+  const cleanMessage =
+    String(message || "").trim();
+
+  if (!cleanMessage) return;
+
+  addMentorMessage(
+    cleanMessage,
+    "user"
+  );
+
+  if (mentorInput) {
+    mentorInput.value = "";
+  }
+
+  setMentorLoading(true);
+
+  const loadingId =
+    "mentor-loading-" + Date.now();
+
+  if (mentorChat) {
+
+    const loading =
+      document.createElement("div");
+
+    loading.id = loadingId;
+
+    loading.className =
+      "mentorMessage bot";
+
+    loading.textContent =
+      "ROMING AI Mentor is thinking… 🤔";
+
+    mentorChat.appendChild(loading);
+
+    mentorChat.scrollTop =
+      mentorChat.scrollHeight;
+  }
+
+  try {
+
+    const response =
+      await fetch(MENTOR_API, {
+
+        method: "POST",
+
+        headers: {
+          "Content-Type":
+            "application/json"
+        },
+
+        body: JSON.stringify({
+          message: cleanMessage
+        })
+
+      });
+
+    const data =
+      await response.json();
+
+    const loading =
+      document.getElementById(
+        loadingId
+      );
+
+    if (loading) {
+      loading.remove();
+    }
+
+    if (!response.ok || !data.success) {
+
+      throw new Error(
+        data.error ||
+        "Mentor request failed."
+      );
+
+    }
+
+    addMentorMessage(
+      data.reply ||
+      "I couldn't generate a reply.",
+      "bot"
+    );
+
+    state.mentorMessages =
+      state.mentorMessages || [];
+
+    state.mentorMessages.push({
+      user: cleanMessage,
+      assistant: data.reply,
+      time: Date.now()
+    });
+
+    /*
+      Keep local history small.
+      This prevents localStorage from growing forever.
+    */
+    if (
+      state.mentorMessages.length > 30
+    ) {
+
+      state.mentorMessages =
+        state.mentorMessages.slice(-30);
+
+    }
+
+    saveState();
+
+  } catch (error) {
+
+    const loading =
+      document.getElementById(
+        loadingId
+      );
+
+    if (loading) {
+      loading.remove();
+    }
+
+    console.error(
+      "ROMING AI Mentor error:",
+      error
+    );
+
+    addMentorMessage(
+      "⚠️ ROMING AI Mentor is temporarily unavailable. Please try again.",
+      "bot"
+    );
+
+  } finally {
+
+    setMentorLoading(false);
+
+    if (mentorInput) {
+      mentorInput.focus();
+    }
+
+  }
+}
+
+
+/* Send button */
+
+if (mentorSend) {
+
+  mentorSend.addEventListener(
+    "click",
+    function () {
+
+      askROMINGMentor(
+        mentorInput
+          ? mentorInput.value
+          : ""
+      );
+
+    }
+  );
+
+}
+
+
+/* Enter key */
+
+if (mentorInput) {
+
+  mentorInput.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (
+        event.key === "Enter" &&
+        !event.shiftKey
+      ) {
+
+        event.preventDefault();
+
+        askROMINGMentor(
+          mentorInput.value
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* Quick buttons */
+
+document
+  .querySelectorAll(
+    ".mentorQuick button"
+  )
+  .forEach(function (button) {
+
+    button.addEventListener(
+      "click",
+      function () {
+
+        const prompt =
+          button.dataset.prompt ||
+          button.textContent;
+
+        askROMINGMentor(prompt);
+
+      }
+    );
+
+  });
+
+
+/* Ctrl/Cmd + K */
+
+document.addEventListener(
+  "keydown",
+  function (event) {
+
+    if (
+      (event.ctrlKey ||
+       event.metaKey) &&
+      event.key.toLowerCase() === "k"
+    ) {
+
+      event.preventDefault();
+
+      if (mentorInput) {
+        mentorInput.focus();
+      }
+
+    }
+
+  }
+);
