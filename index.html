@@ -6,8 +6,10 @@
 
   <title>DronaMentor MAX — Learn. Build. Become.</title>
 
-  <meta name="description"
-        content="DronaMentor MAX is a global learning, AI, career and personal growth platform.">
+  <meta
+    name="description"
+    content="DronaMentor MAX — a global learning, AI, career and personal growth platform."
+  >
 
   <meta name="theme-color" content="#0b0d12">
 
@@ -16,15 +18,21 @@
 
 <body>
 
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
 <header class="topbar">
 
   <a class="brand" href="#home">
+
     <span class="mark">D</span>
 
     <span>
       Drona<strong>Mentor</strong>
       <small>MAX</small>
     </span>
+
   </a>
 
   <nav>
@@ -36,20 +44,36 @@
   </nav>
 
   <div class="topActions">
-    <button id="langBtn">EN</button>
-    <button id="themeBtn">☀️</button>
-    <button id="menuBtn">☰</button>
+
+    <button id="langBtn" type="button">
+      EN
+    </button>
+
+    <button id="themeBtn" type="button">
+      ☀️
+    </button>
+
+    <button id="menuBtn" type="button">
+      ☰
+    </button>
+
   </div>
 
 </header>
 
 
+<!-- =====================================================
+     MOBILE NAV
+===================================================== -->
+
 <div id="mobileNav">
+
   <a href="#home">🏠 Home</a>
   <a href="#learn">📚 Learn</a>
   <a href="#ai">🤖 AI Hub</a>
   <a href="#career">🎯 Career</a>
   <a href="#tools">🛠 Tools</a>
+
 </div>
 
 
@@ -84,7 +108,7 @@
         Start Learning →
       </a>
 
-      <button class="btn ghost" id="goalBtn">
+      <button class="btn ghost" id="goalBtn" type="button">
         Set My Goal 🎯
       </button>
 
@@ -115,15 +139,25 @@
   <div class="heroDashboard">
 
     <div class="dashHeader">
+
       <b>My Growth Dashboard</b>
+
       <span>MAX</span>
+
     </div>
 
     <div class="progressRing">
 
       <div>
-        <strong id="heroProgress">68%</strong>
-        <small>overall</small>
+
+        <strong id="heroProgress">
+          68%
+        </strong>
+
+        <small>
+          overall
+        </small>
+
       </div>
 
     </div>
@@ -152,7 +186,9 @@
 
     <div class="next">
 
-      <small>Next recommended</small>
+      <small>
+        Next recommended
+      </small>
 
       <b>
         🤖 AI Foundations
@@ -178,7 +214,9 @@
 
   <div class="head">
 
-    <span>LEARNING HUB</span>
+    <span>
+      LEARNING HUB
+    </span>
 
     <h2>
       Learn in
@@ -193,10 +231,7 @@
   </div>
 
 
-  <!--
-    SUBJECT LIBRARY
-    Rendered automatically by subjects.js
-  -->
+  <!-- subjects.js renders the complete library here -->
 
   <div id="subjectLibrary"></div>
 
@@ -247,7 +282,9 @@
 
   <div class="head">
 
-    <span>AI ACADEMY</span>
+    <span>
+      AI ACADEMY
+    </span>
 
     <h2>
       From zero to
@@ -376,6 +413,104 @@
 
   </div>
 
+
+  <!-- ===================================================
+       ROMING AI MENTOR
+  =================================================== -->
+
+  <div class="mentorBox" id="mentorBox">
+
+    <div class="mentorHeader">
+
+      <div>
+
+        <span>
+          ROMING AI MENTOR
+        </span>
+
+        <h3>
+          Learn smarter. Build better. Grow faster.
+        </h3>
+
+      </div>
+
+      <b>
+        ● ONLINE
+      </b>
+
+    </div>
+
+
+    <div class="mentorChat" id="mentorChat">
+
+      <div class="mentorMessage bot">
+
+        👋 Hi! I'm
+        <strong>ROMING AI Mentor</strong>.
+
+        <br><br>
+
+        Ask me about subjects, coding,
+        careers, projects or interview preparation.
+
+      </div>
+
+    </div>
+
+
+    <div class="mentorQuick">
+
+      <button
+        type="button"
+        data-prompt="Explain this subject simply"
+      >
+        📚 Explain
+      </button>
+
+      <button
+        type="button"
+        data-prompt="Give me a career roadmap"
+      >
+        🎯 Career
+      </button>
+
+      <button
+        type="button"
+        data-prompt="Suggest a project for me"
+      >
+        🛠 Project
+      </button>
+
+      <button
+        type="button"
+        data-prompt="Give me an interview question"
+      >
+        🎤 Interview
+      </button>
+
+    </div>
+
+
+    <div class="mentorInput">
+
+      <input
+        id="mentorInput"
+        type="text"
+        placeholder="Ask ROMING AI Mentor..."
+        autocomplete="off"
+      >
+
+      <button
+        id="mentorSend"
+        type="button"
+      >
+        ➤
+      </button>
+
+    </div>
+
+  </div>
+
 </section>
 
 
@@ -388,7 +523,9 @@
 
   <div class="head">
 
-    <span>CAREER INTELLIGENCE</span>
+    <span>
+      CAREER INTELLIGENCE
+    </span>
 
     <h2>
       Don't guess your career.
@@ -405,15 +542,15 @@
 
   <div class="careerTools">
 
-    <button id="careerQuiz">
+    <button id="careerQuiz" type="button">
       🧭 Career Finder Quiz
     </button>
 
-    <button id="roadmapBtn">
+    <button id="roadmapBtn" type="button">
       🛣️ Build My Roadmap
     </button>
 
-    <button id="skillBtn">
+    <button id="skillBtn" type="button">
       📊 Skill Gap Check
     </button>
 
@@ -421,7 +558,6 @@
 
 
   <div class="cards careers">
-
 
     <article>
 
@@ -550,7 +686,9 @@
 
   <div class="head">
 
-    <span>MAX TOOLKIT</span>
+    <span>
+      MAX TOOLKIT
+    </span>
 
     <h2>
       Turn knowledge into
@@ -561,7 +699,6 @@
 
 
   <div class="cards four">
-
 
     <article>
 
@@ -576,7 +713,7 @@
         your saved profile.
       </p>
 
-      <button id="resumeBtn">
+      <button id="resumeBtn" type="button">
         Open Tool →
       </button>
 
@@ -595,7 +732,7 @@
         Choose projects by level, skill and career.
       </p>
 
-      <button id="projectBtn">
+      <button id="projectBtn" type="button">
         Explore →
       </button>
 
@@ -614,7 +751,7 @@
         Practice HR and technical questions.
       </p>
 
-      <button id="interviewBtn">
+      <button id="interviewBtn" type="button">
         Practice →
       </button>
 
@@ -633,7 +770,7 @@
         Quiz, memory, pattern and mental-math challenges.
       </p>
 
-      <button id="gameBtn">
+      <button id="gameBtn" type="button">
         Play →
       </button>
 
@@ -653,7 +790,9 @@
 
   <div class="head">
 
-    <span>STUDENT OS</span>
+    <span>
+      STUDENT OS
+    </span>
 
     <h2>
       Your personal
@@ -677,7 +816,10 @@
         placeholder="Add a study task..."
       >
 
-      <button id="addTask">
+      <button
+        id="addTask"
+        type="button"
+      >
         Add task
       </button>
 
@@ -698,11 +840,17 @@
 
       <div>
 
-        <button id="startTimer">
+        <button
+          id="startTimer"
+          type="button"
+        >
           Start
         </button>
 
-        <button id="resetTimer">
+        <button
+          id="resetTimer"
+          type="button"
+        >
           Reset
         </button>
 
@@ -723,29 +871,38 @@
 
       <label>
         HTML
+
         <input
           type="range"
           value="80"
         >
+
       </label>
 
       <label>
         AI
+
         <input
           type="range"
           value="45"
         >
+
       </label>
 
       <label>
         Communication
+
         <input
           type="range"
           value="60"
         >
+
       </label>
 
-      <button id="saveProgress">
+      <button
+        id="saveProgress"
+        type="button"
+      >
         Save progress
       </button>
 
@@ -767,7 +924,9 @@
 
     <div>
 
-      <span>GLOBAL READY</span>
+      <span>
+        GLOBAL READY
+      </span>
 
       <h2>
         Learn across
@@ -781,3 +940,119 @@
       </p>
 
     </div>
+
+
+    <div class="languages">
+
+      <b>English</b>
+      <b>తెలుగు</b>
+      <b>हिन्दी</b>
+      <b>Español</b>
+      <b>Français</b>
+      <b>العربية</b>
+      <b>বাংলা</b>
+      <b>Português</b>
+      <b>Deutsch</b>
+      <b>日本語</b>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="cta">
+
+  <span>
+    DRONAMENTOR MAX
+  </span>
+
+  <h2>
+    Every dream needs a path.
+    <br>
+    <em>Let's build yours.</em>
+  </h2>
+
+  <p>
+    Learn. Practice. Build. Track. Improve. Repeat.
+  </p>
+
+  <button
+    class="btn primary"
+    id="startBtn"
+    type="button"
+  >
+    Start My Journey →
+  </button>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <b>
+    DronaMentor
+    <em>MAX</em>
+  </b>
+
+  <p>
+    Every Dream Deserves a Path.
+  </p>
+
+  <small>
+    © 2026 DronaMentor • Built for learners everywhere.
+  </small>
+
+</footer>
+
+
+
+<!-- =====================================================
+     MAIN MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="modal"
+>
+
+  <div class="modalBox">
+
+    <button
+      class="close"
+      id="close"
+      type="button"
+    >
+      ×
+    </button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="script.js"></script>
+<script src="subjects.js"></script>
+
+</body>
+</html>
