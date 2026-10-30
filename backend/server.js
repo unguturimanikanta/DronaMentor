@@ -1,76 +1,87 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
-import OpenAI from "openai";
-
-dotenv.config();
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
-
 app.get("/", (req, res) => {
   res.json({
     name: "ROMING AI Mentor API",
-    status: "online"
+    status: "online",
+    mode: "demo"
   });
 });
 
-app.post("/api/mentor", async (req, res) => {
-  try {
-    const { message } = req.body;
+app.post("/api/mentor", (req, res) => {
+  const message = String(req.body?.message || "").trim().toLowerCase();
 
-    if (!message || typeof message !== "string") {
-      return res.status(400).json({
-        error: "Message is required."
-      });
-    }
-
-    const response = await client.responses.create({
-      model: "gpt-6-luna",
-      instructions: `
-You are ROMING AI Mentor for DronaMentor MAX.
-
-Tagline:
-Learn smarter. Build better. Grow faster.
-
-Help learners with:
-- School subjects
-- Programming and technology
-- AI and machine learning
-- Engineering
-- Career planning
-- Projects
-- Resume preparation
-- Interview preparation
-- Study planning
-- Productivity
-
-Explain concepts clearly and simply.
-Use headings and bullet points when useful.
-Encourage learning through practice and projects.
-`,
-      input: message
-    });
-
-    res.json({
-      success: true,
-      reply: response.output_text
-    });
-
-  } catch (error) {
-    console.error(error);
-
-    res.status(500).json({
+  if (!message) {
+    return res.status(400).json({
       success: false,
-      error: "ROMING AI Mentor is temporarily unavailable."
+      error: "Message is required."
     });
   }
+
+  let reply;
+
+  if (
+    message.includes("hello") ||
+    message.includes("hi") ||
+    message.includes("hey")
+  ) {
+    reply =
+      "👋 Hi! I'm ROMING AI Mentor. I can help you with subjects, coding, careers, projects and interview preparation.";
+  } else if (
+    message.includes("career") ||
+    message.includes("job") ||
+    message.includes("roadmap")
+  ) {
+    reply =
+      "🎯 Career Mode: Tell me your education, skills and target career. I'll help you build a step-by-step learning roadmap.";
+  } else if (
+    message.includes("project") ||
+    message.includes("build")
+  ) {
+    reply =
+      "🛠️ Project Mode: Choose a skill you're learning and I'll help you turn it into a practical project.";
+  } else if (
+    message.includes("interview") ||
+    message.includes("question")
+  ) {
+    reply =
+      "🎤 Interview Mode: I can give you practice questions, explain the answers and help you improve step by step.";
+  } else if (
+    message.includes("code") ||
+    message.includes("coding") ||
+    message.includes("program")
+  ) {
+    reply =
+      "💻 Coding Mode: I can guide you through programming concepts, logic, debugging and project ideas.";
+  } else if (
+    message.includes("ai") ||
+    message.includes("machine learning") ||
+    message.includes("genai")
+  ) {
+    reply =
+      "🤖 AI Learning Path: Start with Python → mathematics basics → machine learning → deep learning → generative AI → practical projects.";
+  } else if (
+    message.includes("explain") ||
+    message.includes("learn") ||
+    message.includes("subject")
+  ) {
+    reply =
+      "📚 Learning Mode: Tell me the subject or topic you want to learn, and I'll help you break it into simple steps.";
+  } else {
+    reply =
+      "🧠 I'm ROMING AI Mentor. I can currently guide you through learning, coding, AI, careers, projects and interviews. Try asking me one of those!";
+  }
+
+  res.json({
+    success: true,
+    reply
+  });
 });
 
 const PORT = process.env.PORT || 3000;
