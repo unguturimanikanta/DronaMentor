@@ -1,86 +1,1048 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DronaMentor — Every Dream Deserves a Path</title>
-<meta name="description" content="DronaMentor is a global learning, AI, career and personal growth platform.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>DronaMentor MAX — Learn. Build. Become.</title>
+
+  <meta name="description"
+        content="DronaMentor MAX is a global learning, AI, career and personal growth platform.">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="header">
-  <div class="logo"><b>D</b><span>Drona<strong>Mentor</strong></span></div>
-  <nav><a href="#home">Home</a><a href="#learning">Learning</a><a href="#ai">AI</a><a href="#career">Career</a><a href="#explore">Explore</a></nav>
-  <div class="actions">
-    <select id="language"><option>English</option><option>తెలుగు</option><option>हिन्दी</option><option>Español</option><option>Français</option></select>
-    <button id="theme">☀️</button><button id="menu">☰</button>
+
+<header class="topbar">
+
+  <a class="brand" href="#home">
+    <span class="mark">D</span>
+
+    <span>
+      Drona<strong>Mentor</strong>
+      <small>MAX</small>
+    </span>
+  </a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#learn">Learn</a>
+    <a href="#ai">AI</a>
+    <a href="#career">Career</a>
+    <a href="#tools">Tools</a>
+  </nav>
+
+  <div class="topActions">
+    <button id="langBtn">EN</button>
+    <button id="themeBtn">☀️</button>
+    <button id="menuBtn">☰</button>
   </div>
+
 </header>
 
 <div id="mobileNav">
-<a href="#home">🏠 Home</a><a href="#learning">📚 Learning Hub</a><a href="#ai">🤖 AI Hub</a><a href="#career">🧭 Career</a><a href="#explore">🚀 Explore</a>
+  <a href="#home">🏠 Home</a>
+  <a href="#learn">📚 Learn</a>
+  <a href="#ai">🤖 AI Hub</a>
+  <a href="#career">🎯 Career</a>
+  <a href="#tools">🛠 Tools</a>
 </div>
+
 
 <main>
+
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
-<div>
-  <small>🌍 LEARN • GROW • BUILD • SUCCEED</small>
-  <h1>Every Dream <em>Deserves a Path.</em></h1>
-  <p>DronaMentor brings learning, AI, skills, career guidance, projects, resumes and personal growth together in one global platform.</p>
-  <div class="buttons"><a class="primary" href="#learning">Start Learning →</a><a class="secondary" href="#explore">Explore DronaMentor</a></div>
-  <div class="stats"><div><b>100+</b><span>Countries</span></div><div><b>∞</b><span>Learning Paths</span></div><div><b>24/7</b><span>Learning</span></div></div>
-</div>
-<div class="visual"><div class="ring r1"></div><div class="ring r2"></div><div class="card"><div class="brain">🧠</div><h2>Your Journey Starts Here</h2><p>Learn skills. Build projects. Create your future.</p><div class="bar"><span></span></div><small>Career Progress <b>68%</b></small></div></div>
+
+  <div>
+
+    <span class="eyebrow">
+      THE GLOBAL LEARNING OS
+    </span>
+
+    <h1>
+      One place to
+      <em>learn, build & grow.</em>
+    </h1>
+
+    <p>
+      Subjects, AI, coding, projects, careers, resumes,
+      interviews, productivity and brain games —
+      designed as one connected journey.
+    </p>
+
+    <div class="ctaRow">
+
+      <a class="btn primary" href="#learn">
+        Start Learning →
+      </a>
+
+      <button class="btn ghost" id="goalBtn">
+        Set My Goal 🎯
+      </button>
+
+    </div>
+
+    <div class="heroStats">
+
+      <span>
+        <b>100+</b>
+        learning areas
+      </span>
+
+      <span>
+        <b>AI</b>
+        development
+      </span>
+
+      <span>
+        <b>24/7</b>
+        self-paced
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="heroDashboard">
+
+    <div class="dashHeader">
+      <b>My Growth Dashboard</b>
+      <span>MAX</span>
+    </div>
+
+    <div class="progressRing">
+
+      <div>
+        <strong id="heroProgress">68%</strong>
+        <small>overall</small>
+      </div>
+
+    </div>
+
+    <div class="dashCards">
+
+      <div>
+        🔥
+        <b id="streak">7</b>
+        <small>day streak</small>
+      </div>
+
+      <div>
+        ⚡
+        <b id="xp">1240</b>
+        <small>XP</small>
+      </div>
+
+      <div>
+        🏆
+        <b id="badges">8</b>
+        <small>badges</small>
+      </div>
+
+    </div>
+
+    <div class="next">
+
+      <small>Next recommended</small>
+
+      <b>
+        🤖 AI Foundations
+      </b>
+
+      <span>
+        Continue →
+      </span>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="section" id="learning">
-<small>LEARNING HUB</small><h2>Learn Anything. <em>Build Everything.</em></h2>
-<p class="intro">From school subjects to advanced technologies, learn through notes, visuals, practice, quizzes and revision.</p>
-<div class="grid three">
-<article>📚<h3>All Subjects</h3><p>School, intermediate, diploma, degree and professional subjects.</p></article>
-<article>🧠<h3>Smart Learning</h3><p>Multiple learning styles for different learners and goals.</p></article>
-<article>🎯<h3>Personal Roadmap</h3><p>Follow a structured path from beginner to confident learner.</p></article>
-</div>
+
+
+<!-- ================= LEARNING HUB ================= -->
+
+<section class="section" id="learn">
+
+  <div class="head">
+
+    <span>LEARNING HUB</span>
+
+    <h2>
+      Learn in
+      <em>your style.</em>
+    </h2>
+
+    <p>
+      Search subjects, choose your level and use
+      the method that works for you.
+    </p>
+
+  </div>
+
+
+  <div class="learningControls">
+
+    <input
+      id="subjectSearch"
+      placeholder="🔎 Search any subject..."
+    >
+
+    <div id="levelFilters">
+
+      <button class="active">
+        All
+      </button>
+
+      <button>
+        School
+      </button>
+
+      <button>
+        Diploma
+      </button>
+
+      <button>
+        Degree
+      </button>
+
+      <button>
+        Professional
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="cards subjects" id="subjects">
+
+
+    <article data-name="mathematics">
+
+      <i>📐</i>
+
+      <h3>
+        Mathematics
+      </h3>
+
+      <p>
+        Concepts, formulas, examples & practice.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+
+    <article data-name="physics">
+
+      <i>⚛️</i>
+
+      <h3>
+        Physics
+      </h3>
+
+      <p>
+        Understand concepts with visual explanations.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+
+    <article data-name="chemistry">
+
+      <i>🧪</i>
+
+      <h3>
+        Chemistry
+      </h3>
+
+      <p>
+        Reactions, revision, tests & problem solving.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+
+    <article data-name="biology">
+
+      <i>🧬</i>
+
+      <h3>
+        Biology
+      </h3>
+
+      <p>
+        Visual concepts, systems and revision.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+
+    <article data-name="computer science coding">
+
+      <i>💻</i>
+
+      <h3>
+        Computer Science
+      </h3>
+
+      <p>
+        Coding, DSA, databases, networks & systems.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+
+    <article data-name="engineering mechanical civil eee ece">
+
+      <i>⚙️</i>
+
+      <h3>
+        Engineering
+      </h3>
+
+      <p>
+        Mechanical, Civil, EEE, ECE & CSE.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+
+    <article data-name="business economics">
+
+      <i>📈</i>
+
+      <h3>
+        Business & Economics
+      </h3>
+
+      <p>
+        Finance, entrepreneurship, markets & strategy.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+
+    <article data-name="languages english hindi telugu">
+
+      <i>🌐</i>
+
+      <h3>
+        Languages
+      </h3>
+
+      <p>
+        Language learning for a connected world.
+      </p>
+
+      <button class="openLesson">
+        Open →
+      </button>
+
+    </article>
+
+  </div>
+
+
+  <div class="learningModes">
+
+    <b>
+      📖 Learn
+      <br>
+      <small>Simple explanations</small>
+    </b>
+
+    <b>
+      🎥 Visualize
+      <br>
+      <small>Diagrams & examples</small>
+    </b>
+
+    <b>
+      📝 Practice
+      <br>
+      <small>Questions & tasks</small>
+    </b>
+
+    <b>
+      🧠 Remember
+      <br>
+      <small>Flashcards</small>
+    </b>
+
+    <b>
+      🏆 Test
+      <br>
+      <small>Quizzes</small>
+    </b>
+
+  </div>
+
 </section>
 
-<section class="section alt" id="ai">
-<small>AI HUB</small><h2>Enter the World of <em>Artificial Intelligence.</em></h2>
-<p class="intro">Learn AI from fundamentals to machine learning, Generative AI and AI development.</p>
-<div class="grid four">
-<article>🐍<h3>Python for AI</h3><p>Build your programming foundation.</p></article>
-<article>📊<h3>Machine Learning</h3><p>Understand data, models and prediction.</p></article>
-<article>✨<h3>Generative AI</h3><p>Explore modern AI and LLM concepts.</p></article>
-<article>🤖<h3>AI Development</h3><p>Turn AI ideas into real projects.</p></article>
-</div>
+
+
+<!-- ================= AI ACADEMY ================= -->
+
+<section class="section dark" id="ai">
+
+  <div class="head">
+
+    <span>AI ACADEMY</span>
+
+    <h2>
+      From zero to
+      <em>AI builder.</em>
+    </h2>
+
+    <p>
+      A structured AI development journey covering
+      programming, ML, GenAI and real-world applications.
+    </p>
+
+  </div>
+
+
+  <div class="aiPath">
+
+    <div>
+      <small>01</small>
+      <b>🐍 Python</b>
+      <p>Programming</p>
+    </div>
+
+    <i></i>
+
+    <div>
+      <small>02</small>
+      <b>📊 Data + ML</b>
+      <p>Models</p>
+    </div>
+
+    <i></i>
+
+    <div>
+      <small>03</small>
+      <b>🧠 Deep Learning</b>
+      <p>Neural nets</p>
+    </div>
+
+    <i></i>
+
+    <div>
+      <small>04</small>
+      <b>✨ GenAI</b>
+      <p>LLMs</p>
+    </div>
+
+    <i></i>
+
+    <div>
+      <small>05</small>
+      <b>🤖 Agents</b>
+      <p>AI systems</p>
+    </div>
+
+    <i></i>
+
+    <div>
+      <small>06</small>
+      <b>🚀 Deploy</b>
+      <p>Real apps</p>
+    </div>
+
+  </div>
+
+
+  <div class="cards four">
+
+    <article>
+
+      <i>💬</i>
+
+      <h3>
+        Prompt Engineering
+      </h3>
+
+      <p>
+        Design better instructions and workflows.
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <i>🔎</i>
+
+      <h3>
+        RAG
+      </h3>
+
+      <p>
+        Connect AI applications with knowledge.
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <i>⚡</i>
+
+      <h3>
+        AI Agents
+      </h3>
+
+      <p>
+        Learn tools, planning and task execution.
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <i>🛠️</i>
+
+      <h3>
+        AI Projects
+      </h3>
+
+      <p>
+        Build portfolio-ready applications.
+      </p>
+
+    </article>
+
+  </div>
+
 </section>
+
+
+
+<!-- ================= CAREER ================= -->
 
 <section class="section" id="career">
-<small>CAREER GROWTH</small><h2>Turn Skills Into <em>Opportunities.</em></h2>
-<p class="intro">Discover careers, build skills, create projects, prepare your resume and become job-ready.</p>
-<div class="road">
-<div><b>01</b><strong>Discover</strong><span>Find your direction</span></div><i></i>
-<div><b>02</b><strong>Learn</strong><span>Build strong skills</span></div><i></i>
-<div><b>03</b><strong>Build</strong><span>Create real projects</span></div><i></i>
-<div><b>04</b><strong>Launch</strong><span>Start your career</span></div>
-</div>
+
+  <div class="head">
+
+    <span>CAREER INTELLIGENCE</span>
+
+    <h2>
+      Don't guess your career.
+      <em>Explore it.</em>
+    </h2>
+
+    <p>
+      Compare careers by skills, learning time,
+      project ideas and preparation steps.
+    </p>
+
+  </div>
+
+
+  <div class="careerTools">
+
+    <button id="careerQuiz">
+      🧭 Career Finder Quiz
+    </button>
+
+    <button id="roadmapBtn">
+      🛣️ Build My Roadmap
+    </button>
+
+    <button id="skillBtn">
+      📊 Skill Gap Check
+    </button>
+
+  </div>
+
+
+  <div class="cards careers">
+
+
+    <article>
+
+      <i>💻</i>
+
+      <h3>
+        Software Developer
+      </h3>
+
+      <p>
+        Programming • Web • Apps • Systems
+      </p>
+
+      <b>
+        Roadmap →
+      </b>
+
+    </article>
+
+
+    <article>
+
+      <i>🤖</i>
+
+      <h3>
+        AI Developer
+      </h3>
+
+      <p>
+        Python • ML • GenAI • AI apps
+      </p>
+
+      <b>
+        Roadmap →
+      </b>
+
+    </article>
+
+
+    <article>
+
+      <i>📊</i>
+
+      <h3>
+        Data Analyst
+      </h3>
+
+      <p>
+        SQL • Excel • Python • Analytics
+      </p>
+
+      <b>
+        Roadmap →
+      </b>
+
+    </article>
+
+
+    <article>
+
+      <i>🎨</i>
+
+      <h3>
+        UI/UX Designer
+      </h3>
+
+      <p>
+        Research • Design • Prototyping
+      </p>
+
+      <b>
+        Roadmap →
+      </b>
+
+    </article>
+
+
+    <article>
+
+      <i>⚙️</i>
+
+      <h3>
+        CAD / Mechanical
+      </h3>
+
+      <p>
+        CAD • Design • Manufacturing
+      </p>
+
+      <b>
+        Roadmap →
+      </b>
+
+    </article>
+
+
+    <article>
+
+      <i>☁️</i>
+
+      <h3>
+        Cloud & DevOps
+      </h3>
+
+      <p>
+        Cloud • Linux • Automation
+      </p>
+
+      <b>
+        Roadmap →
+      </b>
+
+    </article>
+
+  </div>
+
 </section>
 
-<section class="section" id="explore">
-<small>EXPLORE</small><h2>Everything You Need <em>To Grow.</em></h2>
-<div class="grid three">
-<article>📄<h3>Resume Builder</h3><p>Create a professional resume.</p></article>
-<article>💻<h3>Coding Lab</h3><p>Practice coding and build projects.</p></article>
-<article>🛠️<h3>Project Lab</h3><p>Find projects that match your skills.</p></article>
-<article>🎤<h3>Interview Prep</h3><p>Prepare for your next opportunity.</p></article>
-<article>🧠<h3>Mind Zone</h3><p>Quizzes, puzzles and brain challenges.</p></article>
-<article>📈<h3>Progress Tracker</h3><p>Track your learning and growth.</p></article>
-</div>
+
+
+<!-- ================= MAX TOOLKIT ================= -->
+
+<section class="section tools" id="tools">
+
+  <div class="head">
+
+    <span>MAX TOOLKIT</span>
+
+    <h2>
+      Turn knowledge into
+      <em>proof.</em>
+    </h2>
+
+  </div>
+
+
+  <div class="cards four">
+
+
+    <article>
+
+      <i>📄</i>
+
+      <h3>
+        Resume Builder
+      </h3>
+
+      <p>
+        Build a professional resume with
+        your saved profile.
+      </p>
+
+      <button id="resumeBtn">
+        Open Tool →
+      </button>
+
+    </article>
+
+
+    <article>
+
+      <i>🛠️</i>
+
+      <h3>
+        Project Lab
+      </h3>
+
+      <p>
+        Choose projects by level, skill and career.
+      </p>
+
+      <button id="projectBtn">
+        Explore →
+      </button>
+
+    </article>
+
+
+    <article>
+
+      <i>🎤</i>
+
+      <h3>
+        Interview Arena
+      </h3>
+
+      <p>
+        Practice HR and technical questions.
+      </p>
+
+      <button id="interviewBtn">
+        Practice →
+      </button>
+
+    </article>
+
+
+    <article>
+
+      <i>🧠</i>
+
+      <h3>
+        Mind Zone
+      </h3>
+
+      <p>
+        Quiz, memory, pattern and mental-math challenges.
+      </p>
+
+      <button id="gameBtn">
+        Play →
+      </button>
+
+    </article>
+
+  </div>
+
 </section>
 
-<section class="cta"><small>YOUR JOURNEY</small><h2>Your Future Is Built <em>One Step at a Time.</em></h2><p>Start learning today. Your dream deserves a path.</p><a class="primary" href="#learning">Begin Your Journey →</a></section>
+
+
+<!-- ================= STUDENT OS ================= -->
+
+<section class="section productivity">
+
+  <div class="head">
+
+    <span>STUDENT OS</span>
+
+    <h2>
+      Your personal
+      <em>growth cockpit.</em>
+    </h2>
+
+  </div>
+
+
+  <div class="cockpit">
+
+
+    <div class="panel">
+
+      <h3>
+        🎯 Today's Focus
+      </h3>
+
+      <input
+        id="taskInput"
+        placeholder="Add a study task..."
+      >
+
+      <button id="addTask">
+        Add task
+      </button>
+
+      <ul id="taskList"></ul>
+
+    </div>
+
+
+    <div class="panel timer">
+
+      <h3>
+        ⏱ Focus Timer
+      </h3>
+
+      <strong id="timer">
+        25:00
+      </strong>
+
+      <div>
+
+        <button id="startTimer">
+          Start
+        </button>
+
+        <button id="resetTimer">
+          Reset
+        </button>
+
+      </div>
+
+      <small>
+        Use focused sessions with short breaks.
+      </small>
+
+    </div>
+
+
+    <div class="panel">
+
+      <h3>
+        📈 My Skills
+      </h3>
+
+      <label>
+        HTML
+        <input
+          type="range"
+          value="80"
+        >
+      </label>
+
+      <label>
+        AI
+        <input
+          type="range"
+          value="45"
+        >
+      </label>
+
+      <label>
+        Communication
+        <input
+          type="range"
+          value="60"
+        >
+      </label>
+
+      <button id="saveProgress">
+        Save progress
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= GLOBAL ================= -->
+
+<section class="section global">
+
+  <div class="globalBox">
+
+    <div>
+
+      <span>GLOBAL READY</span>
+
+      <h2>
+        Learn across
+        <em>languages & borders.</em>
+      </h2>
+
+      <p>
+        Content architecture is designed for localization:
+        language switching, regional subjects, examples and
+        future community contributions.
+      </p>
+
+    </div>
+
+
+    <div class="languages">
+
+      <b>English</b>
+      <b>తెలుగు</b>
+      <b>हिन्दी</b>
+      <b>Español</b>
+      <b>Français</b>
+      <b>العربية</b>
+      <b>বাংলা</b>
+      <b>Português</b>
+      <b>Deutsch</b>
+      <b>日本語</b>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="cta">
+
+  <span>
+    DRONAMENTOR MAX
+  </span>
+
+  <h2>
+    Every dream needs a path.
+    <br>
+    <em>Let's build yours.</em>
+  </h2>
+
+  <p>
+    Learn. Practice. Build. Track. Improve. Repeat.
+  </p>
+
+  <button
+    class="btn primary"
+    id="startBtn"
+  >
+    Start My Journey →
+  </button>
+
+</section>
+
 </main>
 
-<footer><b>DronaMentor</b><p>Every Dream Deserves a Path.</p><small>© 2026 DronaMentor. Built for learners everywhere.</small></footer>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <b>
+    DronaMentor
+    <em>MAX</em>
+  </b>
+
+  <p>
+    Every Dream Deserves a Path.
+  </p>
+
+  <small>
+    © 2026 DronaMentor • Built for learners everywhere.
+  </small>
+
+</footer>
+
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="modal">
+
+  <div class="modalBox">
+
+    <button
+      class="close"
+      id="close"
+    >
+      ×
+    </button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+
 <script src="script.js"></script>
+
 </body>
 </html>
